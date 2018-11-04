@@ -16,7 +16,7 @@ Get files from the ftp
 * `path()`
 ```
 $client = new NasdaqCrawler\Client();
-$data = $client->ftp()->path();
+$data = $client->ftp()->path('SymbolDirectory/nasdaqlisted.txt');
 print_r($data);
 ```
  
