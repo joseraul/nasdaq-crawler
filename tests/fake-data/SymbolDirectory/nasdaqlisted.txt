@@ -1,0 +1,4 @@
+Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares
+AABA|Altaba Inc. - Common Stock|Q|N|N|100|N|N
+AAL|American Airlines Group, Inc. - Common Stock|Q|N|N|100|N|N
+File Creation Time: 1130201821:31|||||||

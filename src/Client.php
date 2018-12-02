@@ -6,7 +6,6 @@ use NasdaqCrawler\Resources\Ftp;
 
 class Client
 {
-
     /**
      * Return FTP resource.
      *

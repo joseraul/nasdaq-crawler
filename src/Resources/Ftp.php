@@ -6,10 +6,11 @@ use NasdaqCrawler\ResourceAbstract;
 
 class Ftp extends ResourceAbstract
 {
+    /** @var string */
     protected $base_url = 'ftp://ftp.nasdaqtrader.com/';
 
     /**
-     * Return whatever you want to customize the parser.
+     * Return any file from the ftp.
      *
      * @param $path
      * @return bool|string
@@ -20,7 +21,19 @@ class Ftp extends ResourceAbstract
     }
 
     /**
-     * @param $path
+     * @param $url
+     * @return $this
+     */
+    public function setBaseUrl($url)
+    {
+        $this->base_url = $url;
+        return $this;
+    }
+
+    /**
+     * Return the file nasdaqlisted.txt cleaned.
+     *
+     * @return array
      */
     public function nasdaqlisted()
     {
@@ -43,7 +56,7 @@ class Ftp extends ResourceAbstract
 
         return [
             'info' => $info,
-            'data' => $rows,
+            'data' => array_values($rows),
         ];
     }
 }

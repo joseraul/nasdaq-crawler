@@ -1,5 +1,7 @@
 # Nasdaq Crawler
-Extract information from official Nasdaq website
+This is an Open Source PHP package that helps to extract information from the official Nasdaq website.
+
+Keep in mind that you do not own the information, it is only for your personal use.
 
 ## Install
 ```
@@ -10,7 +12,7 @@ composer require joseraul/nasdaq-crawler
 
 ### Resources
 #### FTP
-Get files from the ftp
+Get files from the ftp folder: ftp://ftp.nasdaqtrader.com
 
 ##### Not parsed (return the raw file)
 * `path()`
@@ -20,7 +22,7 @@ $data = $client->ftp()->path('SymbolDirectory/nasdaqlisted.txt');
 print_r($data);
 ```
  
-##### Parsed (clean the response)
+##### Parsed (response cleaned)
 * `nasdaqlisted()`
 ```
 $client = new NasdaqCrawler\Client();
