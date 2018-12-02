@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/joseraul/nasdaq-crawler.svg?branch=master)](https://travis-ci.org/joseraul/nasdaq-crawler)
+
 # Nasdaq Crawler
 This is an Open Source PHP package that helps to extract information from the official Nasdaq website.
 
