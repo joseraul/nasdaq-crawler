@@ -30,15 +30,8 @@ class Ftp extends ResourceAbstract
         return $this;
     }
 
-    /**
-     * Return the file nasdaqlisted.txt cleaned.
-     *
-     * @return array
-     */
-    public function nasdaqlisted()
+    private function parseSymbolsFile($csv_file)
     {
-        $csv_file = $this->path('SymbolDirectory/nasdaqlisted.txt');
-
         // Parse the rows
         $rows = str_getcsv($csv_file, "\n");
 
@@ -58,5 +51,29 @@ class Ftp extends ResourceAbstract
             'info' => $info,
             'data' => array_values($rows),
         ];
+    }
+
+    /**
+     * Return the file nasdaqlisted.txt cleaned.
+     *
+     * @return array
+     */
+    public function nasdaqlisted()
+    {
+        return $this->parseSymbolsFile(
+            $this->path('SymbolDirectory/nasdaqlisted.txt')
+        );
+    }
+
+    /**
+     * Return the file otherlisted.txt cleaned.
+     *
+     * @return array
+     */
+    public function otherlisted()
+    {
+        return $this->parseSymbolsFile(
+            $this->path('SymbolDirectory/otherlisted.txt')
+        );
     }
 }
