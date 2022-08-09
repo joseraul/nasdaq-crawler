@@ -76,4 +76,16 @@ class Ftp extends ResourceAbstract
             $this->path('SymbolDirectory/otherlisted.txt')
         );
     }
+
+    /**
+     * Return the file options.txt cleaned.
+     *
+     * @return array
+     */
+    public function options()
+    {
+        return $this->parseSymbolsFile(
+            $this->path('SymbolDirectory/options.txt')
+        );
+    }
 }
